@@ -1,0 +1,19 @@
+server:
+  port: 18081
+spring:
+  application:
+    name: stock
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/seata?useSSL=false
+    username: root
+    password: Myl@19960306
+
+seata:
+  tx-service-group: mygroup
+  service:
+    vgroup-mapping:
+      mygroup: default
